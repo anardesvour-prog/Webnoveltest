@@ -24,6 +24,7 @@
             <button id="home-btn" class="nav-btn">Beranda</button>
             <button id="write-btn" class="nav-btn">Tulis</button>
             <button id="collection-btn" class="nav-btn">Koleksi Saya</button>
+            <span id="user-display" class="user-display"></span>
             <button id="login-btn" class="nav-btn">Masuk</button>
             <button id="logout-btn" class="nav-btn" style="display: none;">Keluar</button>
         </nav>
@@ -36,7 +37,7 @@
             <div class="card">
                 <h1>Selamat Datang di Kanvas Imajinasi!</h1>
                 <p>Tempat untuk menuangkan setiap ide, cerita, dan mimpi menjadi karya nyata. Mulai menulis novel, cerita pendek, atau naskah komikmu sekarang juga.</p>
-                <p>Silakan <strong>Masuk</strong> untuk menyimpan karya-karyamu.</p>
+                <p>Silakan <strong>Masuk</strong> atau <strong>Daftar</strong> untuk menyimpan karya-karyamu.</p>
             </div>
         </section>
 
@@ -59,6 +60,106 @@
                 <div id="story-list">
                     <!-- Daftar cerita akan muncul di sini -->
                 </div>
+            </div>
+        </section>
+
+        <!-- Section Detail Cerita (BARU!) -->
+        <section id="story-detail-section" class="content-section">
+            <div class="card">
+                <button id="back-to-collection-btn" class="back-btn">← Kembali ke Koleksi</button>
+                <h2 id="detail-title"></h2>
+                <div id="detail-content" class="detail-content"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Login/Sign Up -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="auth-title">Masuk</h2>
+            <form id="auth-form">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit" class="submit-btn">Masuk</button>
+            </form>
+            <p>Belum punya akun? <a href="#" id="toggle-auth">Daftar di sini</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanvas Imajinasi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background Animasi -->
+    <div class="bg-animation">
+        <span>🌌</span><span>🌠</span><span>🩷</span><span>💮</span><span>🌸</span>
+        <span>🌌</span><span>🌠</span><span>🩷</span><span>💮</span><span>🌸</span>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Kanvas Imajinasi ✨</div>
+        <nav>
+            <button id="home-btn" class="nav-btn">Beranda</button>
+            <button id="write-btn" class="nav-btn">Tulis</button>
+            <button id="collection-btn" class="nav-btn">Koleksi Saya</button>
+            <span id="user-display" class="user-display"></span>
+            <button id="login-btn" class="nav-btn">Masuk</button>
+            <button id="logout-btn" class="nav-btn" style="display: none;">Keluar</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Section Beranda -->
+        <section id="home-section" class="content-section active">
+            <div class="card">
+                <h1>Selamat Datang di Kanvas Imajinasi!</h1>
+                <p>Tempat untuk menuangkan setiap ide, cerita, dan mimpi menjadi karya nyata. Mulai menulis novel, cerita pendek, atau naskah komikmu sekarang juga.</p>
+                <p>Silakan <strong>Masuk</strong> atau <strong>Daftar</strong> untuk menyimpan karya-karyamu.</p>
+            </div>
+        </section>
+
+        <!-- Section Tulis -->
+        <section id="write-section" class="content-section">
+            <div class="card">
+                <h2>Tulis Karya Baru</h2>
+                <form id="writing-form">
+                    <input type="text" id="story-title" placeholder="Judul Cerita..." required>
+                    <textarea id="story-content" rows="20" placeholder="Tulis ceritamu di sini..." required></textarea>
+                    <button type="submit" class="submit-btn">Simpan Karya</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Section Koleksi Saya -->
+        <section id="collection-section" class="content-section">
+            <div class="card">
+                <h2>Koleksi Saya</h2>
+                <div id="story-list">
+                    <!-- Daftar cerita akan muncul di sini -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Detail Cerita (BARU!) -->
+        <section id="story-detail-section" class="content-section">
+            <div class="card">
+                <button id="back-to-collection-btn" class="back-btn">← Kembali ke Koleksi</button>
+                <h2 id="detail-title"></h2>
+                <div id="detail-content" class="detail-content"></div>
             </div>
         </section>
     </main>
